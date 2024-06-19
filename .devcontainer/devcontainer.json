@@ -1,0 +1,26 @@
+{
+	"name": "Go-htmx-env",
+	"image": "mcr.microsoft.com/devcontainers/go:1-1.22-bookworm",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"golang.Go",
+                "ecmel.vscode-html-css",
+                "sidthesloth.html5-boilerplate",
+				"GitHub.copilot"
+			]
+		}
+	},
+
+	// Extra args to enable compatibility between Flatpak vscode and podman
+	"runArgs": ["--userns=keep-id","--network=host"],
+	"privileged": true,
+	"containerUser": "vscode",
+    "workspaceFolder": "/workspace",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,Z"
+}
