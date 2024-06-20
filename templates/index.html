@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic HTMX Example</title>
     <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1>Basic HTMX Example</h1>
+    <h1 class="text-3xl font-bold underline">
+        Basic HTMX Example
+      </h1>
     <form id="imageForm">
-        <button type="submit" hx-get="/getImage" hx-target="#imageResult" hx-swap="innerHTML">Get Image</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="submit" hx-get="/getImage" hx-target="#imageResult" hx-swap="innerHTML">Get Image</button>
     </form>
     <div id="imageResult">
         <!-- Dynamic content will be loaded here -->

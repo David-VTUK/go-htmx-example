@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -35,6 +36,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
 func imageHandler(w http.ResponseWriter, r *http.Request) {
 	//query := r.URL.Query().Get("query")
+	fmt.Println("Button Pressed!")
 
 	url := "https://dog.ceo/api/breeds/image/random"
 	client := &http.Client{Timeout: 10 * time.Second}
